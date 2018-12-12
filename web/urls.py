@@ -7,4 +7,5 @@ urlpatterns = [
     path('message/', MessageList.as_view()),
     path('message/<int:pk>/', MessageDetail.as_view()),
     path('message/create/', MessageCreate.as_view()),
+    path('message/<int:pk>/delete/', MessageDelete.as_view()),
 ]

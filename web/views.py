@@ -17,4 +17,8 @@ class MessageCreate(CreateView):
     fields = ['user', 'subject', 'content']     # 僅顯示 user, subject, content 這 3 個欄位
     success_url = '/message/'                   # 新增成功後，導向留言列表
     template_name = 'form.html'                 # 指定欲使用的頁面範本
-
+ # 刪除留言
+class MessageDelete(DeleteView):
+    model = Message
+    success_url = '/message/'                # 刪除成功返回留言列表
+    template_name = 'confirm_delete.html'
